@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="img/6.png" type="image/png" />
+    <title>Buck</title>
+</head>
+<body>
+   <h1>Buck</h1>
+
+   <div id="juego2">
+        <h2>Gale es el mejor jugador de Buck, la suerte siempre parece estar de su lado. Te animas a desafiarlo?</h2>
+        <form name="Juego" id="Juego">
+                <input type="image" name="d1" id="d1" src="img/1.png" width="150" height="148">
+                <input type="image" name="d2" id="d2" src="img/1.png" width="150" height="150">
+                <input type="image" name="d3" id="d3" src="img/1.png" width="150" height="151">
+                <br><br>
+                <div id="nombreJug">
+                    <input type="text" name="nameplayer" id="nameplayer" placeholder="Nombre del jugador">
+                    <input type="button" name="in" id="in" value="jugar" onclick="iniciar();">
+                </div>
+                <div id="obtenerObj">
+                    <p>Tira los dados para saber cuál será tu número objetivo</p>
+                    <input type="button" name="btobj" id="btobj" value="Tirar dado" onclick="verObjetivo();">
+                </div>
+                <div id="puntajes">
+                    <p id="avisarObj"></p>
+                    <!-- <input type="button" name="bt" id="bt" value="Tirar dado" onclick="tirardados();"> -->
+                    <label for="p1" id="playerpoints"></label>
+                    <input type="text" name="p1" id="p1" readonly>
+                    <br><br>
+                    <label for="p2">Puntaje de Gale</label>
+                    <input type="text" name="p2" id="p2" readonly>
+                    <br><br>
+                    <input type="button" name="bt" id="bt" value="Tirar dados" onclick="tirardados();">
+                </div>
+        </form>
+   </div>
+
+   <div id="reglamento">
+       <h3>Reglamento</h3>
+       <p>
+        Cada jugador tira un dado, si saca un 4, un 5 o un 6, ese número será su objetivo.
+        <br>Si el jugador hizo puntaje en su primer tiro, continuará tirando los tres dados. Cada vez que saque por lo menos un punto, tendrá derecho a volver a tirar los dados. Su turno termina solo cuando no obtenga puntos.
+        <br>El primer participante en hacer 15 puntos gana la partida.
+        <br><br>Puntajes: 
+        <br>Si los 3 dados son iguales y el número es el mismo que el objetivo, automaticamente gana la partida.
+        <br>Si los 3 dados son iguales pero el número no coincide con el objetivo suma 5 puntos.
+        <br>Si la suma de dos dados da el número objetivo, suma 1 punto.
+        <br>Si alguno de los dados coincide con el número objetivo, suma 1 punto.
+        <br>Si uno de los dados coincide con el número objetivo, y la suma de los otros dos dados da el número objetivo, suma 2 puntos.
+       </p>
+   </div>
+
+<script src="script.js"></script>
+</body>
+</html>
