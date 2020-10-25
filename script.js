@@ -91,7 +91,7 @@
                     document.getElementById('p2').value = "Buck Mayor! Ganaste!";
                     }
                 else if (dado1 == dado2 &&  dado1 == dado3) {
-                puntaje1+=5;
+                puntaje2+=5;
                 document.getElementById('p2').value = "Buck Menor! +5 = " + puntaje2;
                 }
                 else if ((dado1+dado2 == objetivo2 || dado1+dado3 == objetivo2 || dado2+dado3 == objetivo2) && (dado1 == objetivo2 || dado2 == objetivo2 || dado3 == objetivo2)) {
